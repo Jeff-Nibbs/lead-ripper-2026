@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI Automation Economy of Rocklin and Roseville</title>
+<style>
+  :root {
+    --ink: #121212;
+    --gray: #5a5a5a;
+    --light-gray: #727272;
+    --rule: #e2e2e2;
+    --link: #326891;
+    --serif: georgia, "times new roman", times, serif;
+    --sans: "helvetica neue", helvetica, arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--serif);
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.65;
+  }
+  .masthead {
+    text-align: center;
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .masthead .paper-name {
+    font-family: "UnifrakturMaguntia", "Old English Text MT", var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+  }
+  .masthead .folio {
+    font-family: var(--sans);
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--gray);
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .masthead .folio span { padding: 0 4px; }
+  article { max-width: 630px; margin: 0 auto; padding: 46px 20px 80px; }
+  .kicker {
+    font-family: var(--sans);
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: #d0021b;
+    margin-bottom: 14px;
+  }
+  h1.headline {
+    font-size: 2.45rem;
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin-bottom: 18px;
+  }
+  .deck {
+    font-size: 1.22rem;
+    line-height: 1.45;
+    color: var(--gray);
+    font-weight: 400;
+    margin-bottom: 26px;
+  }
+  .byline-block {
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 0;
+    margin-bottom: 36px;
+    font-family: var(--sans);
+    font-size: .8rem;
+  }
+  .byline-block .byline { font-weight: 700; }
+  .byline-block .dateline { color: var(--light-gray); margin-top: 2px; }
+  article p { font-size: 1.06rem; margin-bottom: 1.15em; }
+  .byline-block + p {
+    font-family: var(--sans);
+    font-size: .82rem;
+    line-height: 1.6;
+    color: var(--light-gray);
+    padding-bottom: 6px;
+  }
+  article a { color: var(--link); text-decoration: none; overflow-wrap: break-word; }
+  article a:hover { text-decoration: underline; }
+  article h1:not(.headline) {
+    font-family: var(--sans);
+    font-size: .95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    text-align: center;
+    margin: 58px 0 30px;
+    padding-top: 26px;
+    border-top: 4px double var(--ink);
+  }
+  article h2 {
+    font-size: 1.45rem;
+    line-height: 1.25;
+    font-weight: 700;
+    margin: 44px 0 16px;
+  }
+  article h3 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin: 32px 0 10px;
+  }
+  article ul, article ol { margin: 0 0 1.15em 1.35em; }
+  article li { font-size: 1.02rem; margin-bottom: .5em; }
+  article hr { border: 0; border-top: 1px solid var(--rule); margin: 34px auto; width: 120px; }
+  article em { color: inherit; }
+  article strong { font-weight: 700; }
+  .table-wrap { overflow-x: auto; margin: 0 0 1.4em; }
+  article table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: var(--sans);
+    font-size: .82rem;
+    line-height: 1.45;
+  }
+  article thead th {
+    text-align: left;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--light-gray);
+    border-bottom: 1px solid var(--ink);
+    padding: 8px 10px 6px;
+  }
+  article tbody td {
+    border-bottom: 1px solid var(--rule);
+    padding: 9px 10px;
+    vertical-align: top;
+  }
+  article blockquote {
+    border-left: 3px solid var(--ink);
+    padding-left: 18px;
+    margin: 0 0 1.15em;
+    font-style: italic;
+    color: var(--gray);
+  }
+  footer.article-footer {
+    max-width: 630px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    font-family: var(--sans);
+    font-size: .74rem;
+    color: var(--light-gray);
+    border-top: 1px solid var(--rule);
+    padding-top: 18px;
+  }
+  @media (max-width: 480px) {
+    h1.headline { font-size: 1.85rem; }
+    .deck { font-size: 1.05rem; }
+  }
+  @media print {
+    .masthead .folio { display: block; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="masthead">
+  <div class="paper-name">The Lead Ripper Times</div>
+  <div class="folio">
+    <span>VOL. I &hellip; No. 1</span>
+    <span>SOUTH PLACER COUNTY, CALIFORNIA, FRIDAY, JULY 3, 2026</span>
+    <span>RESEARCH EDITION</span>
+  </div>
+</div>
+<article>
+  <p class="kicker">Special Report &middot; The AI Economy</p>
+  <h1 class="headline">In Rocklin and Roseville, an A.I. Gold Rush With Hardly Any Local Miners</h1>
+  <p class="deck">A survey of roughly 15 to 17 verified firms across the two Placer County cities finds enterprise A.I. shops clustered on a single Roseville office corridor &mdash; while the small-business automation market is quietly harvested from Calgary, Oregon and Seattle.</p>
+  <div class="byline-block">
+    <div class="byline">By The Lead Ripper Research Desk</div>
+    <div class="dateline">July 3, 2026 &middot; Compiled from three parallel research passes, ~33 web searches and ~16 site scrapes; every claim cited.</div>
+  </div>
+<p><strong>Research date:</strong> July 3, 2026
+<strong>Scope:</strong> AI automation, AI consulting, workflow automation, AI agents/chatbots, marketing automation, and RPA businesses located in or serving Rocklin, CA and Roseville, CA (South Placer County, Sacramento metro), plus the market context surrounding them.
+<strong>Method:</strong> Three parallel research agents (Rocklin businesses, Roseville businesses, regional market context) ran ~33 web searches and ~16 targeted site scrapes via Firecrawl, with every claim cited to a source URL. <em>Note: Apify was requested for this research, but no Apify token/integration was available in the execution environment, so Firecrawl (the configured web-data provider) was used instead. To use Apify actors (e.g., the Google Maps scraper) in a future run, add an <code>APIFY_TOKEN</code> or the Apify MCP server to the environment.</em></p>
+<hr />
+<h2>Executive Summary</h2>
+<p><strong>Bottom line: roughly 15–17 genuine local players exist across the two cities, but almost none of them sell SMB-focused AI automation (voice agents, chatbots, workflow builds) — that exact niche is being harvested remotely by out-of-town agencies running programmatic local-SEO pages. The &ldquo;Rocklin/Roseville AI automation agency&rdquo; position is effectively unclaimed.</strong></p>
+<p>Key findings:</p>
+<ol>
+<li>
+<p><strong>Roseville has the real supply (~8–10 verified local firms), concentrated in one corridor.</strong> Five of the strongest — Symphonize, WindFarm Marketing, Three Ventures, BlastX Consulting, and Solvd — sit at 920/950/970 Reserve Dr off Douglas Blvd. Xen.AI (501 Gibson Dr) is the purest AI company in the city. These firms skew enterprise (healthcare, banking/financial services, enterprise CX) with offshore delivery arms.</p>
+</li>
+<li>
+<p><strong>Rocklin supply is thin (~7 verified, only 2 truly local service firms).</strong> HQ Software Consulting (AI/ML consulting since 1995) and Wordflirt (boutique AI marketing automation) are the only high-confidence locally headquartered service providers; the rest are AI product companies (TruckBook, HuLoop, Essential Aero) or branch offices (Sourcepass MSP).</p>
+</li>
+<li>
+<p><strong>The SMB gap is being served remotely.</strong> Agencies in Calgary (The Automators), Oregon (Lithium Marketing), Seattle (AutomateNexus), San Diego (AI Agents LLC), and Sacramento (ARMS Digital) all run dedicated Rocklin/Roseville landing pages selling AI receptionists, voice agents, and chatbot builds — proof of local demand with no dominant local supplier.</p>
+</li>
+<li>
+<p><strong>Demand signals are concrete.</strong> Rocklin-HQ&rsquo;d Premier Pool Service is hiring an in-house AI Automation Engineer ($60k–$180k); Roseville&rsquo;s city-backed Venture Lab runs monthly &ldquo;AI for Business&rdquo; workshops; Adventist Health (Roseville HQ) restructured 750 back-office roles around efficiency; the Sacramento Valley SBDC runs free AI trainings that prime SMB demand.</p>
+</li>
+<li>
+<p><strong>The addressable market is ~10,000 businesses</strong> (Rocklin ~2,700–4,000; Roseville ~6,900) in two affluent, fast-growing cities. Best-fit verticals: healthcare-adjacent practices, home services, auto dealers (Roseville Automall, 21 brands), retail, and professional services. National SMB pricing norms ($500–$2,000/mo retainers; $3K–$10K setup projects) should transfer without discounting.</p>
+</li>
+<li>
+<p><strong>Lead-gen channels are well-defined:</strong> Rocklin Area Chamber (600+ members), Roseville Area Chamber (100+ owners per breakfast), BNI Capital Region chapters, SBDC AI trainings, and the Build Up Rocklin accelerator.</p>
+</li>
+</ol>
+<p>The report is organized in three parts: <strong>Part 1 — Rocklin business directory</strong>, <strong>Part 2 — Roseville business directory</strong>, <strong>Part 3 — Market context &amp; lead-generation implications</strong>.</p>
+<hr />
+<h1>PART 1 — ROCKLIN</h1>
+<p><em>Research date: 2026-07-03. Method: 13 web searches + 7 targeted site scrapes.</em></p>
+<hr />
+<h2>TIER 1 — Verified businesses physically located in Rocklin</h2>
+<h3>1. HQ Software Consulting — AI/ML consulting firm</h3>
+<ul>
+<li><strong>Website:</strong> https://hqsft.com | <strong>Confidence: High</strong> (address confirmed on 3+ sources)</li>
+<li><strong>Address:</strong> 2351 Sunset Blvd, Suite 170, Rocklin, CA 95765 | Phone: (916) 672-1048 | Email: corporate@hqsft.com</li>
+<li><strong>Services:</strong> End-to-end AI consulting — AI readiness/technical assessments, rapid PoC &amp; prototyping, custom AI/ML development (predictive analytics, recommendation systems), integration &amp; scaling, post-project support; also DevOps (per LinkedIn tagline).</li>
+<li><strong>Industries:</strong> Healthcare, government, logistics, e-commerce.</li>
+<li><strong>Notable clients (self-stated):</strong> Wells Fargo Bank, State of California, American Healthcare, Hill Physicians Medical Group.</li>
+<li><strong>Founded:</strong> 1995 (&ldquo;over 20 years experience&rdquo;); ~490 LinkedIn followers.</li>
+<li><strong>Sources:</strong> <a href="https://hqsft.com/">hqsft.com</a>, <a href="https://www.mapquest.com/us/california/hq-software-consulting-454267663">MapQuest</a>, <a href="https://www.crunchbase.com/organization/hq-software-consulting">Crunchbase</a>, <a href="https://www.linkedin.com/company/hq-software-consulting">LinkedIn</a>, <a href="https://tracxn.com/d/companies/hqsoftwareconsulting/__rJyw2NT02n3DK9RCdEcBVcaYttAM-S7BCqnYsC2yrn4">Tracxn</a>, <a href="https://www.designrush.com/agency/profile/hq-software-consulting">DesignRush</a></li>
+<li>Best pure-play &ldquo;AI consulting&rdquo; firm actually headquartered in Rocklin.</li>
+</ul>
+<h3>2. TruckBook Technologies — AI-powered freight/logistics platform</h3>
+<ul>
+<li><strong>Website:</strong> https://truckbook.com | <strong>Confidence: High</strong></li>
+<li><strong>HQ:</strong> 5701 Lonetree Blvd, Ste 313, Rocklin, CA 95765 | Phone: (916) 378-5700 (<a href="https://www.zoominfo.com/c/truckbook-inc/528586335">ZoomInfo</a>, <a href="https://www.ambitionbox.com/overview/truckbook-overview">AmbitionBox</a>)</li>
+<li><strong>What it is:</strong> &ldquo;Tech-first freight management company… cutting-edge AI-powered platform for shippers and owner-operators.&rdquo; Started 2018; offices also in Bengaluru &amp; Mohali, India; reported revenue ~$18.5M.</li>
+<li><strong>Note:</strong> AI product company (vertical SaaS), not an agency selling automation services.</li>
+<li><strong>Sources:</strong> <a href="https://truckbook.com/">truckbook.com</a>, <a href="https://www.startupblink.com/top-startups/rocklin-ca-us">StartupBlink Rocklin list</a></li>
+</ul>
+<h3>3. Wordflirt, LLC — AI-powered marketing automation agency</h3>
+<ul>
+<li><strong>Website:</strong> https://www.wordflirt.com | <strong>Confidence: High</strong> (LinkedIn company page lists Rocklin, California)</li>
+<li><strong>Services:</strong> &ldquo;AI-enhanced marketing system that combines websites, content, CRM, lead nurturing, and automation&rdquo; (<a href="https://www.crunchbase.com/organization/wordflirt">Crunchbase</a>); content creation, LinkedIn growth, web design, marketing training/coaching.</li>
+<li><strong>Target customers:</strong> Reverse mortgage loan officers, real estate, coaches, small businesses; recently launched &ldquo;AI Marketing Systems for Reverse Mortgage Professionals&rdquo; (<a href="https://www.wboc.com/online_features/press_releases/wordflirt-launches-ai-marketing-systems-for-reverse-mortgage-professionals/article_6d6b3944-44e4-5e7b-827b-22c7b2989632.html">press release</a>).</li>
+<li><strong>Founder:</strong> Claudia Loens (<a href="https://www.linkedin.com/in/claudialoens">LinkedIn</a>); 10+ years in business; boutique size (~241 LinkedIn followers).</li>
+<li><strong>Sources:</strong> <a href="https://www.linkedin.com/company/wordflirt">LinkedIn company</a></li>
+</ul>
+<h3>4. Sourcepass — national MSP with Rocklin office, prominent AI/automation offering</h3>
+<ul>
+<li><strong>Website:</strong> https://www.sourcepass.com | <strong>Confidence: High</strong> (for office presence; HQ is East Coast)</li>
+<li><strong>Rocklin office:</strong> 5701 Lonetree Blvd, Suite 118 (also Suite 313 per LinkedIn MCOE page), Rocklin, CA 95765 — branded as &ldquo;Sourcepass Sacramento,&rdquo; the dedicated West Coast team (<a href="https://www.sourcepass.com/locations">locations page</a>, <a href="https://www.sourcepass.com/managed-it-services-rocklin">Rocklin MSP page</a>)</li>
+<li><strong>AI services:</strong> &ldquo;Managed Intelligence Services&rdquo; — ongoing AI, BI, and automation services to reduce manual work (<a href="https://www.sourcepass.com/managed-intelligence-services-ai-bi-automation">managed intelligence page</a>); plus a Microsoft Center of Excellence (Copilot/M365 optimization) run out of the Rocklin address (<a href="https://sourcepassmcoe.com/">sourcepassmcoe.com</a>, <a href="https://www.linkedin.com/company/sourcepassmcoe">LinkedIn</a>).</li>
+<li><strong>Target customers:</strong> SMB–mid-market managed IT, cybersecurity, government (Sourcepass GOV).</li>
+<li><strong>Classification:</strong> MSP with prominent AI/automation practice — Rocklin office of a nationwide firm, not locally headquartered.</li>
+</ul>
+<h3>5. HuLoop Automation, Inc. — enterprise AI/no-code intelligent automation platform</h3>
+<ul>
+<li><strong>Website:</strong> https://huloop.ai | <strong>Confidence: Medium for Rocklin proper</strong> — F6S lists &ldquo;Rocklin, United States&rdquo; (<a href="https://www.f6s.com/company/huloop-automation">F6S</a>); the company itself only says &ldquo;Based in the Sacramento, California area&rdquo; (<a href="https://huloop.ai/company/who-we-are/">Who We Are</a>), and a company white paper footer shows CA 95603 (Auburn — also Placer County). Treat as Placer County/Rocklin-area.</li>
+<li><strong>Services/product:</strong> AI-powered, no-code Intelligent Automation platform — intelligent agents, guided workflows, test automation, human-in-the-loop process orchestration; SOC 2 badge displayed. Phone: 530-820-3390.</li>
+<li><strong>Target market:</strong> Enterprise; retail/CPG emphasis in press; partner ecosystem (KYP, AgreeYa — <a href="https://agreeya.com/software/huloop/">agreeya.com/software/huloop</a>).</li>
+<li><strong>Team:</strong> &ldquo;Led by successful software entrepreneurs&rdquo; (CEO Todd Michaud).</li>
+<li><strong>Sources:</strong> <a href="https://huloop.ai/">huloop.ai</a>, <a href="https://www.linkedin.com/company/huloop-automation">LinkedIn</a>, <a href="https://huloop.ai/press-releases/huloop-and-kyp-partner-to-provide-end-to-end-intelligent-automation-for-enterprises/">press release</a></li>
+</ul>
+<h3>6. Essential Aero — AI/computer-vision airfield automation startup</h3>
+<ul>
+<li><strong>Website:</strong> https://www.essentialaero.com | <strong>Confidence: Medium</strong> (listed under Rocklin by <a href="https://www.startupblink.com/top-startups/rocklin-ca-us">StartupBlink</a>; company pages don&rsquo;t prominently state city)</li>
+<li><strong>What it does:</strong> Automates airfield operations with autonomous vehicles, computer vision, and AI; first product &ldquo;FOD-Bot,&rdquo; the &ldquo;Roomba for Runways&rdquo; (<a href="https://www.linkedin.com/company/essentialaero">LinkedIn</a>, <a href="https://www.f6s.com/company/essential-aero-inc">F6S</a>, <a href="https://www.crunchbase.com/organization/essential-aero">Crunchbase</a>).</li>
+<li><strong>Note:</strong> AI robotics product company, not a services agency; Capital Factory portfolio company.</li>
+</ul>
+<h3>7. SOURCEsem Inc — online marketing agency with AI automation</h3>
+<ul>
+<li><strong>Website:</strong> https://www.sourcesem.com | <strong>Confidence: Medium-Low for Rocklin location</strong> — appears in Thumbtack&rsquo;s Rocklin email-marketing listings (<a href="https://www.thumbtack.com/ca/rocklin/email-marketing-consultants">Thumbtack</a>) but no address published on its Framer site.</li>
+<li><strong>Services:</strong> Website development, SEO, paid ads, AI automation, marketing/email/CRM automation.</li>
+<li><strong>Pricing signal:</strong> Basic website package from $2,500.</li>
+<li><strong>Clients (self-stated):</strong> eXp Realty, Heal Clinics, Tree Frogs Showrooms, Special Olympics.</li>
+</ul>
+<hr />
+<h2>TIER 2 — Serving Rocklin but headquartered elsewhere</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Business</th>
+<th>Base</th>
+<th>AI/automation offering</th>
+<th>Rocklin connection</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI Agents LLC (AskAI Agents)</strong></td>
+<td>San Diego, CA (parent NTI Blockchain, est. 1987)</td>
+<td>AI consulting/training, AI voice agents, healthcare AI front desk, n8n/Make.com/OpenAI builds; AI Bootcamp ~$28.50; ph 661-944-5824</td>
+<td>Dedicated Rocklin SEO landing page</td>
+<td><a href="https://consulting.askaiagents.com/aiconsulting-rocklin-ca.html">Rocklin page</a></td>
+</tr>
+<tr>
+<td><strong>ARMS Digital Solutions</strong></td>
+<td>Sacramento, CA (founded ~2020)</td>
+<td>AI implementation agency: readiness audits, AI roadmaps, chat &amp; voice agents, workflow automation, lead-gen systems; free audit/strategy call; (916) 232-7004</td>
+<td>Local landing pages for Roseville/Rocklin/Lincoln/Auburn</td>
+<td><a href="https://armsdigitalsolution.com/">armsdigitalsolution.com</a>, <a href="https://armsdigitalsolution.com/local/roseville/talking-website">Roseville page</a></td>
+</tr>
+<tr>
+<td><strong>Mustardseed Digital</strong></td>
+<td>Sacramento / Yuba-Sutter (since 2016)</td>
+<td>&ldquo;Website design, digital marketing, and AI automation under one roof&rdquo;; (530) 441-2037</td>
+<td>&ldquo;Serving Rocklin, CA&rdquo; location page</td>
+<td><a href="https://mustardseeddigital.com/locations/rocklin">mustardseeddigital.com/locations/rocklin</a></td>
+</tr>
+<tr>
+<td><strong>HummingAgent</strong></td>
+<td>Unclear (multi-state SEO pages)</td>
+<td>AI automation / AI answering for local businesses</td>
+<td>California locations page listing Rocklin</td>
+<td><a href="https://hummingagent.ai/locations/california">hummingagent.ai/locations/california</a></td>
+</tr>
+<tr>
+<td><strong>Synaptech</strong></td>
+<td>Pleasanton, CA</td>
+<td>Custom software, AI solutions, data analytics; (916) 234-0040 sales line</td>
+<td>Top result in Yelp searches for Rocklin software/marketing</td>
+<td><a href="https://synaptech.io/">synaptech.io</a>, <a href="https://www.facebook.com/synaptechio/">Facebook</a></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>Market observations</h2>
+<ul>
+<li><strong>Verified genuinely Rocklin-located players: 7</strong> (4 high-confidence: HQ Software Consulting, TruckBook, Wordflirt, Sourcepass office; 3 medium: HuLoop, Essential Aero, SOURCEsem). Only <strong>one high-confidence pure AI-consulting agency (HQ Software Consulting)</strong> and <strong>one AI-marketing boutique (Wordflirt)</strong> are actually headquartered in the city.</li>
+<li><strong>Density is low; the &ldquo;AI agency&rdquo; slot is largely unclaimed.</strong> No dedicated AI-automation agency (voice agents/chatbots/n8n-style workflow builds for SMBs) is verifiably headquartered in Rocklin. That demand is being absorbed by Sacramento (ARMS), San Diego (AI Agents LLC), and out-of-area SEO-landing-page operators (HummingAgent, Cosmoforge, Locked Down SEO) — a clear local gap.</li>
+<li><strong>Demand signals are real:</strong> Premier Pool Service, headquartered in Rocklin, is hiring an in-house &ldquo;AI Automation Engineer (OpenAI, AI Agents)&rdquo; at $60k–$180k (<a href="https://devitjobs.com/jobs/Premier-Pool-Service-AI-Automation-Engineer-OpenAI-AI-Agents">DevITjobs</a>); ~101 generative-AI jobs listed within the Rocklin area on Indeed; an anonymous operator is pitching AI implementation to local businesses in the Rocklin Local Facebook group (<a href="https://www.facebook.com/groups/RocklinLocal/posts/4060725017503426/">post</a>).</li>
+<li><strong>Cluster note:</strong> 5701 Lonetree Blvd hosts both TruckBook (Ste 313) and Sourcepass (Ste 118) — Rocklin&rsquo;s Lonetree/Sunset corridor is where its B2B tech presence concentrates.</li>
+<li><strong>Caveats:</strong> HuLoop&rsquo;s own materials say &ldquo;Sacramento area&rdquo; (F6S says Rocklin; older materials point to Auburn 95603) — verify before citing a Rocklin address. SOURCEsem&rsquo;s physical address could not be confirmed. Facebook-group operators could not be identified by name.</li>
+</ul>
+<hr />
+<h1>PART 2 — ROSEVILLE</h1>
+<p><em>Research date: July 3, 2026. Method: 12 web searches + 9 targeted site scrapes. Sources cited per claim.</em></p>
+<hr />
+<h2>Tier 1: Verified Roseville-headquartered / Roseville-office companies</h2>
+<h3>1. Xen.AI — HIGH confidence (Roseville-based)</h3>
+<ul>
+<li><strong>Website:</strong> https://xen.ai/</li>
+<li><strong>Address:</strong> 501 Gibson Dr, Roseville, CA 95678 (per Clutch structured data: https://clutch.co/developers/artificial-intelligence/sacramento; profile: https://clutch.co/profile/xenai)</li>
+<li><strong>What they do:</strong> Fully managed and customized AI solutions — Intelligent Document Processing (IDP), Advanced Analytics (customer, enterprise, healthcare, ecommerce, anomaly detection/predictive maintenance), AI-powered Governance/Risk/Compliance, &ldquo;AI Transformation Challenge&rdquo; engagement program (xen.ai homepage).</li>
+<li><strong>Verticals:</strong> Healthcare &amp; life sciences (dental, medical, radiology — &ldquo;ASPiRE&rdquo; peer-review product), Banking/Financial Services/Insurance, media/advertising.</li>
+<li><strong>Structure:</strong> &ldquo;California based R&amp;D organization with operations in the USA and India&rdquo; (Clutch profile). Microsoft/Azure Marketplace partner (xen.ai site nav). Clutch describes it as a &ldquo;small AI company located in Roseville&rdquo; focused on AI + AI consulting.</li>
+<li><strong>Fit note:</strong> This is the purest &ldquo;AI company&rdquo; actually located in Roseville.</li>
+</ul>
+<h3>2. Symphonize — HIGH confidence (Roseville office is US HQ)</h3>
+<ul>
+<li><strong>Website:</strong> https://www.symphonize.com/</li>
+<li><strong>Address:</strong> 920 Reserve Dr #100, Roseville, CA 95678; additional offices in Ann Arbor MI and Bengaluru/Hyderabad/Vijayawada, India (symphonize.com footer).</li>
+<li><strong>Services:</strong> AI solutions, business process automation, RPA, custom software development, UX, web/mobile, cloud (symphonize.com; their /services/automation page cites Deloitte RPA adoption stats).</li>
+<li><strong>Clients:</strong> Christian Financial Credit Union, Huntington National Bank, Paqqets, Meridian Medical Management, Thales Group (symphonize.com).</li>
+<li><strong>Profile:</strong> Founded ~2008, roughly 100-person org across offices (site-extracted; treat team size as self-reported). Targets startups through multinational enterprises, especially financial services and healthcare.</li>
+</ul>
+<h3>3. Three Ventures Technology, Inc. — HIGH confidence (Roseville HQ)</h3>
+<ul>
+<li><strong>Website:</strong> https://www.threeventures.com/</li>
+<li><strong>Address:</strong> 950 Reserve Drive #100, Roseville, CA 95678; second office in Frisco, TX (threeventures.com; corroborated by Clutch and The Manifest: https://themanifest.com/it-services/marketing-automation/companies/sacramento — &ldquo;Launched in 2012&hellip; small team based in Roseville, California and Frisco, Texas&rdquo;).</li>
+<li><strong>Services:</strong> Marketing automation, Generative AI, analytics audits, marketing analytics, data visualization, tag management, PPC/SEM, CRMs, cloud transformation/cost optimization, APIs, e-commerce (threeventures.com).</li>
+<li><strong>Clients:</strong> Goldline, Keyport Inc., Partnership To End Addiction, Giant Eagle, Lakeshore Learning Materials, NetCE (threeventures.com).</li>
+<li><strong>Size/founded:</strong> ~55 people (site-extracted); founding year listed as 2015 on site vs. &ldquo;launched 2012&rdquo; per The Manifest.</li>
+<li><strong>Contact:</strong> info@threeventures.com, +1 (916) 507-0003.</li>
+</ul>
+<h3>4. Solvd, Inc. — HIGH confidence (founded in Roseville; HQ listings vary)</h3>
+<ul>
+<li><strong>Website:</strong> https://solvd.com/</li>
+<li><strong>Address:</strong> 970 Reserve Dr #205, Roseville, CA 95678 (RightFirms: https://www.rightfirms.co/company/solvd-inc). Crunchbase lists HQ as Roseville (https://www.crunchbase.com/organization/solvd-0e11); solvd.com/about-us states &ldquo;Solvd was founded in Roseville, California, with a specialized focus on QA services and&hellip; test automation.&rdquo; Caveat: ZoomInfo shows a Walnut Creek address, so current physical HQ is ambiguous.</li>
+<li><strong>Services:</strong> &ldquo;AI engineering company&rdquo; — AI integration, model fine-tuning, agentic AI, AI consulting, RAG, plus QA/test automation heritage (LinkedIn: https://www.linkedin.com/company/solvdinc; RightFirms).</li>
+<li><strong>Scale:</strong> Global engineering firm (largest company on this list); notable enterprise work incl. a joint AI innovation lab with a major U.S. apparel retailer (solvd.com).</li>
+</ul>
+<h3>5. BlastX Consulting — HIGH confidence (Roseville-registered)</h3>
+<ul>
+<li><strong>Website:</strong> https://www.blastx.com/</li>
+<li><strong>Address:</strong> 950 Reserve Dr #150, Roseville, CA 95678 (Clutch structured data, same directory page as above).</li>
+<li><strong>Services:</strong> Digital customer-experience (CX) consultancy — analytics, MarTech, CX strategy; launched the &ldquo;BlastX AI Innovation Center,&rdquo; a hub for research and solution design &ldquo;focused on operationalizing AI&rdquo; (BusinessWire, Oct 2023: https://www.businesswire.com/news/home/20231012406923/en/).</li>
+<li><strong>Target:</strong> Mid-market to enterprise companies (blastx.com). Great Place To Work certified (greatplacetowork.com/certified-company/7012411).</li>
+</ul>
+<h3>6. WindFarm Marketing — HIGH confidence (Roseville HQ)</h3>
+<ul>
+<li><strong>Website:</strong> https://www.windfarmmarketing.com/</li>
+<li><strong>Address:</strong> 920 Reserve Dr, Ste 180, Roseville, CA 95678; (916) 678-0092 (Yelp: https://www.yelp.com/biz/windfarm-marketing-roseville-4; Facebook confirms &ldquo;Roseville CA&rdquo;).</li>
+<li><strong>Services:</strong> Inbound marketing agency; HubSpot Partner (&ldquo;Rookie of the Year 2014&rdquo;) — marketing automation via HubSpot, content, ROI-measured campaigns (windfarmmarketing.com). Marketing-automation player rather than an AI pure-play.</li>
+</ul>
+<h3>7. Holm Marketing Solutions — HIGH confidence (Roseville-based, likely solo/small)</h3>
+<ul>
+<li><strong>Website:</strong> https://holmmarketingsolutions.com/</li>
+<li><strong>Location:</strong> &ldquo;Based in Roseville. Built for businesses everywhere.&rdquo; (homepage). No street address published.</li>
+<li><strong>Services:</strong> AI-first marketing agency — AI-powered lead-generation systems, GoHighLevel (GHL) automations, custom qualifier apps, direct mail, CRM &amp; funnels, SEO/social/email automation (site meta description + homepage).</li>
+<li><strong>Target:</strong> Small businesses in Sacramento/Roseville/Bay Area plus nationwide. No pricing published; free strategy call CTA. Appears to be a small/boutique shop (site built on gpt-engineer/Lovable per OG image host).</li>
+</ul>
+<h3>8. WebVello — MEDIUM-HIGH confidence (Roseville address; heavy programmatic footprint)</h3>
+<ul>
+<li><strong>Website:</strong> https://www.webvello.com/</li>
+<li><strong>Address:</strong> 2281 Lava Ridge Ct, Roseville, CA 95661; (530) 553-8883; Hello@Webvello.com (webvello.com footer).</li>
+<li><strong>Services:</strong> AI Search Optimization (GEO/AEO — getting clients cited in ChatGPT, Perplexity, Google AI Overviews), SEO, local SEO, web development, CRO (webvello.com).</li>
+<li><strong>Pricing:</strong> Starter $2,500/mo, Professional $5,000/mo, Enterprise $12,000/mo; add-on services from $1,500 (webvello.com).</li>
+<li><strong>Founded/size:</strong> 2019, ~50 team (self-reported). Caveat: &ldquo;Serving 37+ cities&rdquo; with programmatic city pages; Lava Ridge Ct is a multi-tenant office building, so physical presence may be a suite/virtual office.</li>
+</ul>
+<h3>9. OSKI Solutions — MEDIUM confidence (Roseville US office)</h3>
+<ul>
+<li><strong>Website:</strong> https://oski.site/</li>
+<li><strong>Address:</strong> 2281 Lava Ridge Ct, Roseville, CA 95661; +1 530-553-8883 (per their own blog: https://oski.site/blog/ai-consulting-companies-sacramento-california/). Note: identical address AND phone prefix to WebVello — these appear related or use the same office suite; treat the physical footprint with caution.</li>
+<li><strong>Services:</strong> Software development and AI consulting (their blog positions them for the Sacramento/Roseville market). Likely an offshore dev firm (Ukraine) with a US address.</li>
+</ul>
+<h3>10. Bay Area Coders — MEDIUM confidence (Roseville-registered, SF-branded)</h3>
+<ul>
+<li><strong>Clutch profile:</strong> https://clutch.co/profile/bay-area-coders — &ldquo;San Francisco-based product and engineering studio working with venture-backed startups&hellip; since 2016,&rdquo; yet its listed address in Clutch/Manifest directories is 7960 Halesworth Drive, Roseville, CA 95747 (residential-style address — likely founder&rsquo;s registration). The Manifest lists them under &ldquo;Roseville, CA&hellip; Custom Software Development, Web, Mobile, UX/UI&rdquo; with AI capabilities (https://themanifest.com/artificial-intelligence/companies/sacramento).</li>
+</ul>
+<hr />
+<h2>Tier 2: Nearby (Placer/Sacramento metro) firms prominently serving Roseville with AI/automation</h2>
+<h3>Vision Quest Information Solutions (VQIS) — Citrus Heights, CA (borders Roseville)</h3>
+<ul>
+<li><strong>Website:</strong> https://vqis.net/</li>
+<li><strong>Services:</strong> Cybersecurity-first managed IT plus explicit &ldquo;AI Services&rdquo; and automation for Greater Sacramento organizations (municipalities, construction, healthcare, professional services); founded 1998 (vqis.net). Has a dedicated Roseville landing page (https://vqis.net/managed-it-cybersecurity-roseville/) and was hiring an &ldquo;AI &amp; Automation Specialist&rdquo; in Roseville (LinkedIn job: https://www.linkedin.com/jobs/view/ai-automation-specialist-at-vision-quest-cybersecurity-4407492367).</li>
+</ul>
+<h3>Yotalabs — Citrus Heights, CA</h3>
+<ul>
+<li>7433 Greenback Ln, Ste H, Citrus Heights 95610 — appears on Clutch&rsquo;s Sacramento AI companies list (Clutch structured data). Not researched further; adjacent-market player.</li>
+</ul>
+<hr />
+<h2>Tier 3: Marketing &ldquo;serving Roseville&rdquo; but based elsewhere (programmatic local-SEO pages — NOT local)</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Reality</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>The Automators</strong> (theautomators.ai/ai-agency-roseville/)</td>
+<td>Calgary, Alberta, Canada agency with detailed Roseville landing page (chatbots, voice agents, doc processing; ships in 2–6 weeks; &ldquo;simple chatbots start in the low thousands&rdquo;)</td>
+<td>Page geo metadata: <code>geo.placename: Calgary</code>, <code>geo.region: CA-AB</code>, &ldquo;Calgary AI Agency&rdquo; classification</td>
+</tr>
+<tr>
+<td><strong>Lithium Marketing</strong> (lithiumseo.com/roseville-california-ai-systems/)</td>
+<td>AI receptionist from $179/mo, voice AI agents, CRM automation; named AI specialist DJ Van Zanten. Demo phone is a 503 (Oregon) number; the Roseville page is one of many city pages — likely Pacific-NW based, serving Roseville remotely</td>
+<td>Scraped page content + phone (503) 766-5964</td>
+</tr>
+<tr>
+<td><strong>AutomateNexus</strong> (automatenexus.com)</td>
+<td>Programmatic Roseville pages for chatbot development and n8n/Make/Zapier workflow automation; phone 206-657-5517 (Seattle)</td>
+<td>Search results for both Roseville pages</td>
+</tr>
+<tr>
+<td><strong>The Ad Leaf</strong> (theadleaf.com)</td>
+<td>Florida agency with &ldquo;AI phone answering&hellip; Roseville CA&rdquo; SEO page</td>
+<td>Search result</td>
+</tr>
+<tr>
+<td><strong>Binary Studio, Nightcoders, Offshore Marketers, VC3, Fuse Three</strong></td>
+<td>Out-of-area dev shops/MSPs with Roseville location pages</td>
+<td>Search results (binary-studio.com/ai-app-development-roseville/, nightcoders.com/software-development-roseville, vc3.com, fusethree.com)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>Summary &amp; Market Observations</h2>
+<p><strong>Verified genuine local players: ~8–10</strong> (Xen.AI, Symphonize, Three Ventures, Solvd, BlastX, WindFarm, Holm Marketing, WebVello, plus lower-confidence OSKI and Bay Area Coders).</p>
+<ol>
+<li>
+<p><strong>The Reserve Drive cluster.</strong> Five of the strongest local companies sit within one office corridor off Douglas Blvd: 920 Reserve Dr (Symphonize #100, WindFarm #180), 950 Reserve Dr (Three Ventures #100, BlastX #150), 970 Reserve Dr (Solvd #205). Anyone prospecting Roseville AI firms can practically walk the block.</p>
+</li>
+<li>
+<p><strong>Bimodal market.</strong> Local supply splits into (a) enterprise-grade AI/engineering firms with offshore delivery (Xen.AI, Symphonize, Solvd, BlastX) targeting healthcare/BFSI/enterprise CX, and (b) marketing-flavored automation (Three Ventures, WindFarm, WebVello, Holm).</p>
+</li>
+<li>
+<p><strong>Gap: local SMB-focused AI automation.</strong> There is no strong <em>Roseville-based</em> agency doing AI voice agents / receptionists / chatbot automation for local SMBs — that exact demand is being harvested by out-of-town programmatic-SEO players (The Automators from Calgary, Lithium from Oregon, AutomateNexus from Seattle), all of whom built dedicated Roseville pages. Holm Marketing (GHL automation) is the closest local entrant but is marketing-first and small.</p>
+</li>
+<li>
+<p><strong>Demand signals.</strong> City-backed Roseville Venture Lab runs free monthly &ldquo;AI for Business&rdquo; workshops for small businesses (https://www.roseville.ca.gov/articles/AI-for-Business-Practical-Tools-for-Small-Businesses-620.php); Adventist Health (Roseville HQ) hires marketing-automation staff; a Roseville business-process-automation provider was acquired by Naviant, an RPA (Kryon) partner (https://madisonbiz.com/naviant-inc-acquires-business-process-automation-provider-in-roseville-ca/). Major local anchors (Kaiser, Sutter, HPE, GoodLeap, Union Pacific) make healthcare + fintech the dominant vertical demand.</p>
+</li>
+</ol>
+<p><strong>Confidence caveats:</strong> Team sizes and founding years are self-reported or directory-derived; the 2281 Lava Ridge Ct address is shared by WebVello and OSKI (likely suite/virtual office); Solvd&rsquo;s current physical HQ shows conflicting listings (Roseville per Crunchbase/RightFirms/own About page vs. Walnut Creek per ZoomInfo).</p>
+<hr />
+<h1>PART 3 — MARKET CONTEXT &amp; LEAD-GEN IMPLICATIONS</h1>
+<h2>1. Business &amp; Economic Profile (the customer base)</h2>
+<p><strong>Rocklin</strong>
+- Population 71,609 (2024, city data) to ~76,800 (2026 est.); 4th fastest-growing city in California by percentage, ~97% growth since 2000 (<a href="https://www.rocklin.ca.us/econdev">City of Rocklin</a>; <a href="https://localbusinesspipeline.com/blog/rocklin-small-business-statistics-2026/">PipelineOS Rocklin 2026 report</a>)
+- ~2,699 businesses per ZoomProspector/Greater Sacramento Economic Council; ~4,000 licensed via the city&rsquo;s Department of Finance (<a href="https://zoomprospector.com/communities/ca/city/rocklin/0662364">ZoomProspector</a>; <a href="https://greatersacramento.com/communities/placer-county/rocklin/">GSEC</a>; <a href="https://localbusinesspipeline.com/blog/rocklin-small-business-statistics-2026/">PipelineOS</a>)
+- Jobs grew ~26% 2015–2024 (27,853 → ~35,000). Top employment sectors: Healthcare &amp; Social Assistance (~5,568), Professional &amp; Technical Services (~4,068), Retail Trade (~3,560). City lists top industries as Education/Hospitals (local govt), Retail, and Professional/Scientific/Technical Services; Oracle has a Rocklin campus, plus Sierra College and William Jessup University (<a href="https://www.rocklin.ca.us/econdev">City of Rocklin</a>; <a href="https://localbusinesspipeline.com/blog/rocklin-small-business-statistics-2026/">PipelineOS</a>)
+- Median household income $105,617+; median home value ~$703K — an affluent service-business market (home services, medical/dental, professional services) (<a href="https://www.rocklin.ca.us/why-rocklin">City of Rocklin</a>)</p>
+<p><strong>Roseville</strong>
+- Most populous city in Placer County (~155K); ~6,889 businesses; leading industries in 2024: Health Care &amp; Social Services, Retail, Other Services (<a href="https://en.wikipedia.org/wiki/Roseville,_California">Wikipedia</a>; <a href="https://greatersacramento.com/communities/placer-county/roseville/">GSEC</a>)
+- Key industries: healthcare (Kaiser Permanente ~5,000 local employees — city&rsquo;s top employer; Sutter Roseville), retail (Westfield Galleria, Fountains, Roseville Automall), technology (HP/Hewlett Packard Enterprise campus), education (<a href="https://scoutcities.com/states/california/cities/roseville-ca">Scout Cities</a>; <a href="https://www.careersingovernment.com/tools/public-sector-news/roseville-ca-growth-is-in-full-bloom-heres-why/">Careers in Government</a>; <a href="https://labormarketinfo.edd.ca.gov/majorer/countymajorer.asp?CountyCode=000061">CA EDD major employers</a>)
+- 220+ manufacturers operate in Roseville (chips, medical devices, machinery) (<a href="https://goldmountaincanews.com/news/371207/manufacturing-powers-rosevilles-economic-future/">Gold Country Media</a>); city runs a formal economic development strategy, &ldquo;Envision Roseville&rdquo; (<a href="https://www.roseville.ca.gov/Documents/Departments/Economic%20Development/EcDev%20Strategy/ED_StrategicPlanProgressReport_Year3.pdf">City progress report PDF</a>)
+- Ranked 18th among top 100 US economic-growth cities (SmartAsset, via <a href="https://www.instagram.com/p/CmJ8IJJJi5a/">City of Roseville</a>)</p>
+<p><strong>Regional scale:</strong> Placer County has 13,000+ businesses serving 400K+ residents; the SBA Sacramento District covers 200,300+ small businesses (<a href="https://localbusinesspipeline.com/blog/rocklin-small-business-statistics-2026/">PipelineOS, citing Placer County Economic Development</a>).</p>
+<h2>2. Demand Signals for AI/Automation</h2>
+<ul>
+<li><strong>Healthcare is the anchor vertical.</strong> Sutter Roseville just added 36 beds to become Placer County&rsquo;s largest hospital; Kaiser is expanding Roseville facilities (<a href="https://www.facebook.com/groups/1507129072837539/posts/4051968451686909/">Facebook/local news</a>; <a href="https://www.sacbee.com/news/local/health-and-medicine/article213558949.html">Sacramento Bee</a>). Adventist Health (HQ in Roseville) publicly uses AI for triage/diagnostics and restructured 750 back-office roles to &ldquo;improve efficiency&rdquo; — a signal that ops automation is on healthcare execs&rsquo; agenda (<a href="https://adventisthealthpolicy.org/ai-use-in-the-health-care-space">Adventist Health Policy</a>; <a href="https://www.beckershospitalreview.com/finance/adventist-health-restructures-back-office-services-750-workers-affected/">Becker&rsquo;s</a>). The big systems buy enterprise; the realistic AI-agency market is the ecosystem around them (private practices, dental, PT, home health, medical billing).</li>
+<li><strong>City government is tech-forward.</strong> Roseville brands itself a &ldquo;smart city&rdquo; with a published citywide technology work plan (<a href="https://www.roseville.ca.gov/departments/information_technology/index.php">City IT dept</a>; <a href="https://www.roseville.ca.gov/Documents/Departments/Information%20Technology/About/Strategic%20Planning/IT_WorkPlan_24_25_Digital.pdf">IT Work Plan PDF</a>); an AI data center proposal was recently before the Planning Commission (<a href="https://www.facebook.com/modestobee/posts/1482434900594008/">Modesto Bee via Facebook</a>).</li>
+<li><strong>Retail/auto volume creates SMB demand.</strong> Westfield Galleria: 240+ stores, 2,500 employees, $730M annual sales (<a href="https://www.cbsnews.com/sacramento/news/roseville-galleria-celebrates-25-years/">CBS Sacramento</a>); Roseville Automall hosts 21 dealership brands (<a href="https://www.rosevilleautomall.com/">rosevilleautomall.com</a>) — dealerships are heavy adopters of AI voice/chat/lead-follow-up tools.</li>
+<li><strong>SMB AI education is actively happening</strong>: Sacramento Valley SBDC runs free &ldquo;Intro to AI for Small Businesses&rdquo; trainings (<a href="https://www.sacramentovalleysbdc.org/event/intro-to-ai-what-small-businesses-need-to-know/">SBDC</a>); free hands-on AI programs for businesses in Rancho Cordova (<a href="https://startupsac.com/startup-events-week-of-september-1/">StartupSac</a>). Rocklin itself runs &ldquo;Build Up Rocklin,&rdquo; a business acceleration program with Growth Factory, now in its third cohort (<a href="https://www.rocklin.ca.us/node/5401">City of Rocklin</a>).</li>
+<li><strong>The gap is real:</strong> a local audit-based report claims ~27% of Rocklin businesses have no website, ~90% of audited local businesses have zero organic presence, and local businesses miss ~62% of inbound calls (~$126K/yr lost) — exactly the problems AI receptionists/chatbots/workflow automation solve (<a href="https://localbusinesspipeline.com/blog/rocklin-small-business-statistics-2026/">PipelineOS</a>; note: vendor-published, directionally useful).</li>
+</ul>
+<h2>3. Competitive Landscape (Sacramento metro)</h2>
+<p>From the &ldquo;24 Top AI Agencies in Sacramento&rdquo; roundup (<a href="https://aisuperior.com/ai-agencies-sacramento/">AI Superior</a>) and direct search:
+- <strong>Locally rooted competitors:</strong> Iation (Sacramento AI/automation agency), 11:59 (regional consulting, El Dorado Hills area), Prodigy Consulting, Uniwebb Software, Kazka AI Consulting, AI Agents LLC, Sierra Exclusive, Buttered Marketing, Vo Media.
+- <strong>National/remote players marketing into Sacramento:</strong> AutomateNexus runs a dedicated &ldquo;AI Automation Agency in Sacramento&rdquo; landing page targeting small businesses (<a href="https://automatenexus.com/locations/california/sacramento">automatenexus.com</a>); larger dev shops (Azumo, Innowise, MobiDev, Intuz, etc.) compete for bigger builds.
+- <strong>Adjacent local competitor:</strong> PipelineOS (Wesley Cable, Rocklin/Sacramento) sells local SEO + &ldquo;AI search optimization&rdquo; + lead pipeline systems and is already publishing Rocklin-specific data content (<a href="https://localbusinesspipeline.com/blog/rocklin-small-business-statistics-2026/">localbusinesspipeline.com</a>).
+- Notably, <strong>no dominant Rocklin/Roseville-branded AI automation agency</strong> surfaced — the niche of a hyper-local, SMB-focused AI automation provider in South Placer appears underserved; competition is mostly Sacramento-branded or national.</p>
+<h2>4. Pricing Norms (US SMB AI automation)</h2>
+<ul>
+<li>Small-business retainers typically <strong>$500–$2,000/month</strong>; mid-market <strong>$3,000–$8,000/month</strong> (<a href="https://taskip.net/ai-automation-agency-pricing/">Taskip</a> — packages span $500 to $20K+)</li>
+<li>Project builds: simple workflow automation <strong>$3,000–$10,000</strong>; more complex builds <strong>$10,000–$35,000</strong>; chatbots around <strong>$500 setup + up to $500/month per bot</strong> (<a href="https://arsum.com/blog/posts/ai-automation-agency-pricing/">Arsum</a>)</li>
+<li>AI automation consulting engagements for small business run <strong>$5K–$75K</strong> overall (<a href="https://www.layer3labs.io/ai-consulting-for-small-business">Layer3 Labs</a>)</li>
+<li>Hybrid model gaining traction: ~<strong>$4K/month core &ldquo;AI ops&rdquo; retainer</strong> plus per-workflow fees (<a href="https://www.digitalapplied.com/blog/ai-agency-services-pricing-strategies-2026">Digital Applied</a>)</li>
+<li>No published Rocklin/Roseville-specific AI-automation price points were found; the closest local proxy is web/SEO pricing content from PipelineOS (<a href="https://localbusinesspipeline.com/blog/how-much-does-website-cost-rocklin-ca">e.g., website cost in Rocklin</a>). Given local median household income &gt;$105K and healthy service businesses, national SMB pricing should transfer without discounting.</li>
+</ul>
+<h2>5. Networking Channels for Lead Generation</h2>
+<ul>
+<li><strong>Rocklin Area Chamber of Commerce</strong> — 600+ member businesses; breakfast meetings, mixers, leadership programs (<a href="https://www.rocklinchamber.com/">rocklinchamber.com</a>; <a href="https://www.linkedin.com/company/rocklin-area-chamber-of-commerce">LinkedIn</a>; <a href="https://californialocal.com/localnews/placer/ca/community_group/show/1296-rocklin-area-chamber-of-commerce/overview/">CaliforniaLocal</a>)</li>
+<li><strong>Roseville Area Chamber of Commerce</strong> — chamber breakfasts drawing 100+ owners/leaders, Coffee Passport networking, New Member Orientation, and the &ldquo;Placer Valley&rdquo; regional business summit (<a href="https://www.rosevillechamber.com/">rosevillechamber.com</a>; <a href="https://business.rosevillechamber.com/chamber-events">event calendar</a>; <a href="https://www.rosevillechamber.com/placer-valley/">Placer Valley</a>; <a href="https://www.linkedin.com/company/roseville-chamber-of-commerce">LinkedIn</a>)</li>
+<li><strong>BNI California Capital Region</strong> — active referral chapters across the Sacramento/Placer region (<a href="https://bnicv.com/en-US/index">bnicv.com</a>); local Facebook groups also discuss BizLink and other referral groups (<a href="https://www.facebook.com/groups/1243837853504978/posts/1421410595747702/">example thread</a>)</li>
+<li><strong>Startup/SMB ecosystem:</strong> Sacramento Valley SBDC AI trainings (<a href="https://www.sacramentovalleysbdc.org/event/intro-to-ai-what-small-businesses-need-to-know/">SBDC</a>), 1 Million Cups Sacramento at the Carlsen Center, StartupSac events (<a href="https://startupsac.com/startup-events-week-of-september-1/">startupsac.com</a>), Sacramento Area Business Owners Meetup (<a href="https://www.meetup.com/sacramento-area-business-owners/">meetup.com</a>), Eventbrite small-business events (<a href="https://www.eventbrite.com/b/ca--sacramento/business/startups-and-small-business/">Eventbrite Sacramento</a>), Capital Region Small Business Week (<a href="https://www.facebook.com/SacCountyEconDev/posts/286782921113967/">Sac County EconDev</a>)</li>
+<li><strong>City programs as warm channels:</strong> Build Up Rocklin accelerator cohort and the City&rsquo;s Business Ombudsman/SizeUp tool (<a href="https://www.rocklin.ca.us/econdev">rocklin.ca.us</a>); Roseville Economic Development partnerships (<a href="https://www.roseville.ca.gov/Documents/Departments/Economic%20Development/EcDev%20Strategy/ED_StrategicPlanProgressReport_Year3.pdf">roseville.ca.gov</a>)</li>
+</ul>
+<h2>Implications for Lead Generation Targeting Rocklin/Roseville</h2>
+<ol>
+<li><strong>The TAM is ~10,000 businesses</strong> (Rocklin ~2,700–4,000 + Roseville ~6,900) in two affluent, fast-growing cities — big enough for a local-first agency, small enough that chamber + referral presence can cover it.</li>
+<li><strong>Best-fit verticals:</strong> healthcare-adjacent SMBs (private medical/dental/PT practices riding the Kaiser/Sutter/Adventist expansion), home services (fed by high-income homeowners), auto dealerships (Automall, 21 brands), retail, and professional services — all named leading industries in both cities.</li>
+<li><strong>Lead with the missed-call/no-web-presence pain</strong>: local data (62% missed calls, 90% no organic presence) maps directly to AI receptionist, chatbot, and follow-up automation offers.</li>
+<li><strong>Positioning gap:</strong> no established Rocklin/Roseville-branded AI automation agency exists; competitors are Sacramento-branded, national, or SEO-first (PipelineOS). A hyper-local &ldquo;South Placer AI automation&rdquo; identity is available.</li>
+<li><strong>Pricing:</strong> anchor SMB retainers at $500–$2,000/month with $3K–$10K setup projects, consistent with national norms; local incomes support the upper half of those ranges.</li>
+<li><strong>Channel priority:</strong> join both chambers (Roseville breakfasts = 100+ owners per event; Rocklin = 600+ members), get into a BNI Capital Region chapter, and offer free &ldquo;Intro to AI&rdquo; talks via SBDC/chamber programming — the SBDC is already priming demand with AI-education events, and Build Up Rocklin is a direct line to scale-ready local businesses.</li>
+</ol>
+</article>
+<footer class="article-footer">
+  <p>Source document: research/ai-automation-businesses-rocklin-roseville.md &middot; lead-ripper-2026. Research method note: Apify was requested but unavailable in the execution environment; Firecrawl was used as the web-data provider. Company details are self-reported or directory-derived where noted; verify addresses before outreach.</p>
+</footer>
+</body>
+</html>
